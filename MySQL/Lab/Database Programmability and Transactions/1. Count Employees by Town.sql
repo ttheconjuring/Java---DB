@@ -1,5 +1,3 @@
-DELIMITER $
-
 CREATE FUNCTION ufn_count_employees_by_town(town_name VARCHAR(50)) 
 RETURNS INT
 DETERMINISTIC
@@ -10,5 +8,5 @@ BEGIN
 	JOIN towns t ON a.town_id = t.town_id
 	WHERE t.name = town_name);
 	RETURN count;
-END $
+END
 
